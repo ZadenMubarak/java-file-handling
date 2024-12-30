@@ -1,0 +1,2 @@
+move 10 meters forward
+turn 90 degrees clockwise
