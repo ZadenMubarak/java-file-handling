@@ -5,15 +5,25 @@ import java.util.Scanner;
 public class Read{
 
     public static void main(String[] args) {
-        // Read a file
+
+        //reading from files in java
 
         try {
             File myobj = new File("cmd.txt");
             Scanner myreader = new Scanner(myobj);
+
+            while (myreader.hasNextLine()){
+                String data = myreader.nextLine();
+                System.out.println(data);
+            }
+            myreader.close();
             
-        } catch (Exception e) {
-            // TODO: handle exception
-            System.out.println("Error: " + e.getMessage());
+        } catch (FileNotFoundException e) {
+
+            //functionality toalert you that the file enterd does not exist
+
+            System.out.println("Error");
+            e.printStackTrace();
         }
 
        
